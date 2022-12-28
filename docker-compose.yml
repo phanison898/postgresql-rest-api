@@ -11,7 +11,7 @@ services:
     ports:
       - ${PG_DB_PORT}:5432
     volumes:
-      - ./database:/var/lib/postgresql/data
+      - ./_database:/var/lib/postgresql/data
 
   adminer:
     image: adminer
