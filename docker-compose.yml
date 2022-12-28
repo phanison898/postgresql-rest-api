@@ -7,9 +7,11 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: ${PG_PSWD}
     ports:
       - 5432:5432
+    volumes:
+      - ./database:/var/lib/postgresql/data
 
   adminer:
     image: adminer
